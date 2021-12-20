@@ -1,0 +1,175 @@
+.shop-list {
+  padding: 10px;
+  .row {
+    padding: 10px;
+    display: flex;
+    border-radius: 3px;
+  }
+
+  h4 {
+    font-weight: bold;
+    margin: 5px;
+  }
+
+  .button,
+  h4 {
+    display: inline;
+  }
+
+  .button {
+    float: right;
+  }
+
+  th {
+    background-color: rgb(184, 161, 199);
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  tr {
+    border: 0 0 1px 0 solid #ccc;
+  }
+
+  .navbar-row {
+    background: white;
+    right: 0px;
+  }
+
+  #table-wrapper {
+    position: relative;
+  }
+
+  #table-scroll {
+    height: 600px;
+    overflow: auto;
+    margin-top: 20px;
+  }
+
+  #table-wrapper table {
+    width: 100%;
+  }
+
+  .avatar-shop {
+    img {
+      border-radius: 5px;
+    }
+  }
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  /* The Close Button */
+  /* 100% Image Width on Smaller Screens */
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  #myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  .closeimg {
+    position: absolute;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    &:hover {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+  .main-image {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    img {
+      width: 100%;
+      float: left;
+      overflow: hidden;
+    }
+  }
+  .thumbs {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    img {
+      display: inline-block;
+      width: 100px;
+      margin-right: 5px;
+    }
+  }
+}
