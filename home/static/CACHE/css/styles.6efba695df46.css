@@ -1,0 +1,320 @@
+/* line 1, home/static/scss/sidebar.scss */
+.sidebar-wrap {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
+
+/* line 6, home/static/scss/sidebar.scss */
+.logo img {
+  max-width: 80%; }
+
+/* line 10, home/static/scss/sidebar.scss */
+.sidebar-content {
+  height: 100vh; }
+
+/* line 13, home/static/scss/sidebar.scss */
+i {
+  position: absolute;
+  margin: 0;
+  display: flex; }
+
+/* line 20, home/static/scss/sidebar.scss */
+.sidebar li {
+  display: inline-flex;
+  align-items: center; }
+  /* line 24, home/static/scss/sidebar.scss */
+  .sidebar li i {
+    padding: 10px; }
+  /* line 28, home/static/scss/sidebar.scss */
+  .sidebar li a {
+    width: 100%;
+    display: block;
+    padding: 13px 20px;
+    border-bottom: 1px solid #10558d;
+    color: #b9b2b2;
+    font-size: 16px; }
+    /* line 35, home/static/scss/sidebar.scss */
+    .sidebar li a:hover {
+      color: #0c7db1;
+      background: white;
+      border-right: 2px solid #054468; }
+      /* line 39, home/static/scss/sidebar.scss */
+      .sidebar li a:hover:before {
+        display: block; }
+    /* line 44, home/static/scss/sidebar.scss */
+    .sidebar li a.active {
+      color: red; }
+
+/* line 1, home/static/scss/header.scss */
+.logo-src {
+  width: 100% !important;
+  height: 100% !important;
+  display: block; }
+  /* line 5, home/static/scss/header.scss */
+  .logo-src img {
+    max-width: 200px; }
+
+/* line 11, home/static/scss/header.scss */
+.header-menu p {
+  padding: 0 0 0 16px;
+  font-size: 18px; }
+
+/* line 16, home/static/scss/header.scss */
+.header-menu i {
+  display: flex;
+  width: 20px; }
+
+/* line 1, home/static/scss/base.scss */
+.wrapper {
+  display: flex; }
+
+/* line 5, home/static/scss/base.scss */
+.left {
+  width: 20vw; }
+
+/* line 9, home/static/scss/base.scss */
+.right {
+  width: 80vw; }
+
+/* line 13, home/static/scss/base.scss */
+.content {
+  padding: 10px; }
+
+/* line 1, home/static/scss/shop.scss */
+.shop-list {
+  padding: 10px; }
+  /* line 3, home/static/scss/shop.scss */
+  .shop-list h5 {
+    color: #5a585c;
+    font-weight: bold;
+    font-size: 20px; }
+  /* line 9, home/static/scss/shop.scss */
+  .shop-list tr {
+    background-color: #fff !important; }
+  /* line 13, home/static/scss/shop.scss */
+  .shop-list #table-scroll {
+    height: 600px;
+    overflow: auto;
+    margin-top: 20px; }
+  /* line 19, home/static/scss/shop.scss */
+  .shop-list .avatar-shop {
+    height: 70px; }
+    /* line 21, home/static/scss/shop.scss */
+    .shop-list .avatar-shop img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px; }
+  /* line 28, home/static/scss/shop.scss */
+  .shop-list .ui.table {
+    border-bottom: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none; }
+  /* line 34, home/static/scss/shop.scss */
+  .shop-list .card-title {
+    margin-bottom: 0px; }
+
+/* line 1, home/static/scss/user.scss */
+.list_user {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100vh; }
+  /* line 6, home/static/scss/user.scss */
+  .list_user .row {
+    padding: 10px;
+    display: flex;
+    border-radius: 3px; }
+  /* line 12, home/static/scss/user.scss */
+  .list_user h4 {
+    font-weight: bold; }
+  /* line 16, home/static/scss/user.scss */
+  .list_user .group__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #cccc;
+    padding: 5px;
+    border-radius: 5px; }
+    /* line 24, home/static/scss/user.scss */
+    .list_user .group__checkbox .checkbox {
+      width: 100%;
+      height: 30px; }
+  /* line 30, home/static/scss/user.scss */
+  .list_user .avatar.image {
+    height: 2em !important;
+    width: 2em !important; }
+  /* line 35, home/static/scss/user.scss */
+  .list_user .title-user {
+    float: right;
+    background-color: #666687;
+    padding: 0 5px 0 5px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold; }
+  /* line 45, home/static/scss/user.scss */
+  .list_user .text {
+    width: 100%; }
+  /* line 49, home/static/scss/user.scss */
+  .list_user .nick-name {
+    display: inline-block;
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: Ellipsis; }
+
+/* line 1, home/static/scss/detailShop.scss */
+.shop-list {
+  padding: 10px;
+  /* The Close Button */
+  /* 100% Image Width on Smaller Screens */ }
+  /* line 3, home/static/scss/detailShop.scss */
+  .shop-list .row {
+    padding: 10px;
+    display: flex;
+    border-radius: 3px; }
+  /* line 9, home/static/scss/detailShop.scss */
+  .shop-list h4 {
+    font-weight: bold;
+    margin: 5px; }
+  /* line 14, home/static/scss/detailShop.scss */
+  .shop-list .button,
+  .shop-list h4 {
+    display: inline; }
+  /* line 19, home/static/scss/detailShop.scss */
+  .shop-list .button {
+    float: right; }
+  /* line 23, home/static/scss/detailShop.scss */
+  .shop-list th {
+    background-color: #b8a1c7; }
+  /* line 27, home/static/scss/detailShop.scss */
+  .shop-list table {
+    border-collapse: collapse; }
+  /* line 31, home/static/scss/detailShop.scss */
+  .shop-list tr {
+    border: 0 0 1px 0 solid #ccc; }
+  /* line 35, home/static/scss/detailShop.scss */
+  .shop-list .navbar-row {
+    background: white;
+    right: 0px; }
+  /* line 40, home/static/scss/detailShop.scss */
+  .shop-list #table-wrapper {
+    position: relative; }
+  /* line 44, home/static/scss/detailShop.scss */
+  .shop-list #table-scroll {
+    height: 600px;
+    overflow: auto;
+    margin-top: 20px; }
+  /* line 50, home/static/scss/detailShop.scss */
+  .shop-list #table-wrapper table {
+    width: 100%; }
+  /* line 55, home/static/scss/detailShop.scss */
+  .shop-list .avatar-shop img {
+    border-radius: 5px; }
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+  /* line 77, home/static/scss/detailShop.scss */
+  .shop-list #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row; }
+    /* line 83, home/static/scss/detailShop.scss */
+    .shop-list #myImg:hover {
+      opacity: 0.7; }
+  /* line 87, home/static/scss/detailShop.scss */
+  .shop-list #myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s; }
+    /* line 91, home/static/scss/detailShop.scss */
+    .shop-list #myImg2:hover {
+      opacity: 0.7; }
+  /* line 95, home/static/scss/detailShop.scss */
+  .shop-list .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9); }
+  /* line 108, home/static/scss/detailShop.scss */
+  .shop-list .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s; }
+  /* line 118, home/static/scss/detailShop.scss */
+  .shop-list #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s; }
+  /* line 132, home/static/scss/detailShop.scss */
+  .shop-list .closeimg {
+    position: absolute;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s; }
+    /* line 139, home/static/scss/detailShop.scss */
+    .shop-list .closeimg:hover {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer; }
+    /* line 144, home/static/scss/detailShop.scss */
+    .shop-list .closeimg:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer; }
+  @media only screen and (max-width: 700px) {
+    /* line 151, home/static/scss/detailShop.scss */
+    .shop-list .modal-content {
+      width: 100%; } }
+  /* line 155, home/static/scss/detailShop.scss */
+  .shop-list .main-image {
+    width: 100%;
+    float: left;
+    overflow: hidden; }
+    /* line 159, home/static/scss/detailShop.scss */
+    .shop-list .main-image img {
+      width: 100%;
+      float: left;
+      overflow: hidden; }
+  /* line 165, home/static/scss/detailShop.scss */
+  .shop-list .thumbs {
+    width: 100%;
+    float: left;
+    margin-top: 15px; }
+    /* line 169, home/static/scss/detailShop.scss */
+    .shop-list .thumbs img {
+      display: inline-block;
+      width: 100px;
+      margin-right: 5px; }
