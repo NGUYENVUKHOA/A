@@ -1,0 +1,82 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %} Home page {% endblock %}
+
+{% block contents %}
+<div class="shop-list">
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-body" id="table-wrapper">
+                <h4>DETAIL SHOP</h4>
+                <div id="table-scroll">
+                    <table class="mb-0 table">
+                        <thead>
+                            <tr class="collum">
+                                <th class="text">ID</th>
+                                <th class="text">Name</th>
+                                <th class="text">Location</th>
+                                <th class="text">Username</th>
+                                <th class="text">Career</th>
+                                <th class="text">Phone</th>
+                                <th class="text">Email</th>
+                                <th class="text">Address</th>
+                                <th class="text">Description</th>
+                                <th class="text">Avatar Image</th>
+                                <th class="text">Images</th>
+                                <th class="text">Multi-Images</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% for i in results %}
+
+                            <tr class="table-row" id="{{i}}">
+                                <td scope="row">{{i.0}}</td>
+                                <td>{{i.1}}</td>
+                                <td>{{i.2}}</td>
+                                <td>{{i.3}}</td>
+                                <td>{{i.4}}</td>
+                                <td>{{i.5}}</td>
+                                <td>{{i.6}}</td>
+                                <td>{{i.7}}</td>
+                                <td>{{i.8}}</td>
+                                <td class="avatar-shop" id="lightgallery" data-lg-size="1600-2400">
+                                    <img src="{% if i.9 %}{{ server_image }}/shop/logo/small/{{i.9}}{% else %}{% static 'images/shop-default.png' %}{% endif %}"
+                                        alt="">
+                                </td>
+                                <td class="avatar-shop">
+                                    <img src="{% if i.10 %}{{ server_image }}/shop/logo/small/{{i.10}}{% else %}{% static 'images/shop-default.png' %}{% endif %}"
+                                        alt="">
+                                </td>
+                                {% for j in image %}
+                                {% if not j %}
+                                <td class="avatar-shop">
+                                    <img src="{% static 'images/shop-default.png' %}" alt="">
+                                </td>
+                                {% else %}
+                                <td class="avatar-shop">
+                                    <div class="outer">
+                                        <img src="{{MEDIA_URL}}{{ server_image }}/shop/multi_files/{{j}}" id="myImg"
+                                            class="img-fluid">
+                                        <div id="myModal" class="modal">
+                                            <span class="closeimg">&times;</span>
+                                            <img id="modal-img" class="modal-content" src="" style="max-width: 400px;">
+                                            <div id="caption"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% load static %}
+	{% load compress %}
+	{% compress css %}
+	<link type="text/x-scss" href="{% static 'scss/styles.scss' %}" rel="stylesheet" media="screen">
+	{% endcompress %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap-5.1.3/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'fontawesome-5.15.4/css/fontawesome.css' %}">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/css/lightgallery.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/css/lg-thumbnail.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/css/lg-zoom.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/css/lightgallery-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+	<div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+		{% include 'pages/master/header.html' %}
+		<div class="app-main">
+			{% include 'pages/master/sidebar.html' %}
+			<div class="app-main__outer">
+				<div class="app-main__inner">
+					{% block contents %}{% endblock contents %}
+				</div>
+			</div>
+		</div>
+		{% include 'pages/master/footer.html' %}
+	</div>
+</body>
+<script language="javascript" src="https://kit.fontawesome.com/eb26961326.js"></script>
+<script language="javascript" src="{% static 'js/jquery-3.6.0.min.js'%}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{% comment %} <script language="javascript" src="{% static 'bootstrap-5.1.3/js/bootstrap.min.js'%}"></script> {% endcomment %}
+{% comment %} <script language="javascript" src="{% static 'bootstrap-5.1.3/js/bootstrap.bundle.min.js'%}"></script> {% endcomment %}
+<script language="javascript" src="{% static 'semantic/semantic.min.js' %}"></script>
+<script type="text/javascript" src="{% static './assets/scripts/main.js' %}"></script>
+<script language="javascript" src="{% static 'js/main.js'%}"></script>
+<script language="javascript" src="{% static 'js/functions.js'%}"></script>
+<script language="javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/lightgallery.min.js"></script>
+<script language="javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+<script language="javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/plugins/zoom/lg-zoom.umd.min.js"></script>
+</html>
+
+<script>
+	 $(document).ready(function(){
+          $('.ui.dropdown').dropdown();
+    });
+</script>

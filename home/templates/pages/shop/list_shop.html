@@ -1,0 +1,66 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block title %} Home page {% endblock %}
+
+{% block contents %}
+<div class="shop-list">
+	<div class="row">
+		<div class="col-md">
+			<div class="main-card mb-3 card">
+				<div class="card card-body" id="table-wrapper">
+					<h5 class="card-title">List shop</h5>
+					<div id="table-scroll">
+						<table class="ui striped table">
+							<tr>
+								<th>Images</th>
+								<th>Name</th>
+								<th>Status</th>
+								<th>Date create</th>
+								<th>Data update</th>
+								<th>Detail</th>
+								<th>Approve</th>
+								<th>Disable</th>
+							</tr>
+
+							{% for shop in shops %}
+							<tr id="{{shop}}">
+								<td class="avatar-shop">
+									<img src="{% if shop.avatar_image %}{{ server_image }}/shop/logo/small/{{shop.avatar_image}}{% else %}{% static 'images/shop-default.png' %}{% endif %}"
+										alt="">
+								</td>
+								<td>{{shop.name}}</td>
+								<td id="active_U">
+									{% if shop.status == 1 %}
+									<span class="badge" style="background:green">Active</span>
+									{% elif shop.status == 2 %}
+									<span class="badge" style="background:rgb(220,53,69)">Disable</span>
+									{% elif shop.status == 3 %}
+									<span class="badge" style="background:rgb(255,193,7)">Pending</span>
+									{% elif shop.status == 4 %}
+									<span class="badge" style="background:#0dcaf0">Lack info</span>
+									{% endif %}
+								</td>
+								<td>{{shop.created_at|date:"Y-m-d H:m:s"}}</td>
+								<td>{{shop.updated_at|date:"Y-m-d H:m:s"}}</td>
+								<td><a class="btn btn-sm btn-secondary" href="{% url 'detailShop' pk=shop.id%}"
+										method="POST">Detail</a>
+								</td>
+								<td><a class="btn btn-sm btn-info" idx={{shop.id}} onclick="active_user();"
+										href="{% url 'approve_update' pk=shop.id%}" method="POST">Approve</a>
+								</td>
+								<td><a class="btn btn-sm btn-danger" onclick="disabled_user();"
+										href="{% url 'disabled_update' pk=shop.id%}" method="POST">Disble</a></td>
+							</tr>
+							{% endfor %}
+
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+{% endblock %}
