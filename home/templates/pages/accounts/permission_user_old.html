@@ -1,0 +1,89 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Permission User {% endblock %}
+{% block contents %}
+
+<div class="list_user">
+	<div class="row">
+		<div class="col-md">
+			<div class="card card-body" id="table-wrapper">
+				<h4>PERMISSION USER</h4>
+				<input type="text" class="form-control" id="searchArticles" onkeyup="Search()"
+					placeholder="Search shop's name..">
+				<br>
+				<div id="table-scroll">
+					<table class="mb-0 table table-permission" id="myTable">
+						<thead>
+							<tr>
+							<tr class="table-row">
+								<th class="text">Images</th>
+								<th class="head">Shop's ID
+
+								</th>
+								<th class="head">Shop's Name
+
+								</th>
+								<th class="head">User's Name</th>
+								<th class="head">Role</th>
+								<th class="head" style="width: 25%;">Info of Role</th>
+							</tr>
+							</tr>
+						</thead>
+						<tbody>
+							{% for i in results %}
+
+							<tr class="table-row" idx="{{i.id}}">
+								<td class="avatar-shop" scope="row" style="text-align: center">
+									<img src="{% if shop.avatar_image %}{{ server_image }}/shop/logo/small/{{shop.avatar_image}}{% else %}{% static 'images/shop-default.png' %}{% endif %}"
+										alt="">
+								</td>
+								<td style="text-align: center">{{i.id}}</td>
+								<td>{{i.shop_name}}</td>
+								<td>
+									<!-- <input id="ferranMessage" type="checkbox" class="delete_checkbox" onClick="onToggle()"> -->
+									<button class="btn" onClick="onToggle();" idx="{{i.id}}">See More</button>
+									{{i.nick_name}}
+								</td>
+								<td id="function_U">
+									{{i.role}}
+								</td>
+								<td class="table-head" colspan="{{results.list|length}}" id="{{i.id}}">
+									<div class="ui checkbox role">
+										<input type="checkbox" id="mycheckbox1">
+										<label>Pos</label>
+									</div>
+									<div class="ui checkbox role">
+										<input type="checkbox" id="mycheckbox2">
+										<label> Host Collection </label>
+									</div>
+									<div class="ui checkbox role">
+										<input type="checkbox" id="mycheckbox3">
+										<label>Chat</label>
+									</div>
+									<div class="ui checkbox role">
+										<input type="checkbox" id="mycheckbox4">
+										<label>Livestream</label>
+									</div>
+									<div class="ui checkbox role">
+										<input type="checkbox" id="mycheckbox5">
+										<label>Social Management</label>
+									</div>
+									<div class="ui checkbox role">
+										<input type="checkbox" id="mycheckbox6">
+										<label>Agency System</label>
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Permission User {% endblock %}
+{% block contents %}
+
+<div class="list_user">
+	<div class="row">
+		<div class="col-md">
+			<h4>PERMISSION USER</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="ui fluid selection dropdown search">
+				<input type="hidden" name="user">
+				<i class="dropdown icon"></i>
+				<div class="default text">Select shop</div>
+				<div class="menu">
+					{% for shop in shops %}
+					<div class="item" data-value={{shop.id}} id="shop-item" onClick="onClickShop({{shop.id}}, this);">
+						<img class="ui mini avatar image"
+							src="{% if shop.avatar_image %}{{ server_image }}/shop/logo/small/{{shop.avatar_image}}{% else %}{% static 'images/shop-default.png' %}{% endif %}">
+						{{shop.name}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="ui fluid selection dropdown search clear-user">
+				<input type="hidden" name="user">
+				<i class="dropdown icon"></i>
+				<div class="default text">Select user</div>
+				<div class="menu" id="user-list">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 group__checkbox">
+			<div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="1" class="check-all" id="abc">
+				<label>All</label>
+			</div>
+			<div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="2" class="check-pos">
+				<label>Pos</label>
+			</div>
+			<div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="3" class="check-host-collection">
+				<label>Host Collection</label>
+			</div>
+			<div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="4" class="check-chat">
+				<label>Chat</label>
+			</div>
+			<div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="5" class="check-live-stream">
+				<label>Live stream</label>
+			</div>
+			<div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="6" class="check-social-management">
+				<label>Social Management</label>
+			</div>
+			{% comment %} <div class="ui toggle checkbox">
+				<input type="checkbox" name="public" value="7" class="check_agencysystem">
+				<label>Agency System</label>
+			</div> {% endcomment %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+<script>
+</script>
